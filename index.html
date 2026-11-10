@@ -85,8 +85,13 @@ nav.bar .add.on{background:var(--blue);color:var(--blue-ink)}
 .locate{position:absolute;right:12px;bottom:12px;z-index:2;width:46px;height:46px;border-radius:50%;border:0;background:var(--surface);color:var(--blue);display:grid;place-items:center;box-shadow:var(--shadow),0 0 0 1px var(--line)}
 .locate svg{width:22px;height:22px}
 .me{width:18px;height:18px;border-radius:50%;background:#2f7bff;border:3px solid #fff;box-shadow:0 0 0 6px rgba(47,123,255,.25),0 2px 6px rgba(0,0,0,.4)}
-.pin{background:var(--blue);color:var(--blue-ink);font:700 11px var(--plate-font);letter-spacing:.06em;padding:5px 8px;border-radius:8px 8px 8px 2px;white-space:nowrap;
-  border:2px solid #fff;box-shadow:0 3px 8px rgba(0,0,0,.35);transform:translate(-4px,-100%)}
+.pin{position:absolute;left:0;top:0;width:max-content;transform:translate(-50%,calc(-100% - 9px));display:flex;align-items:center;
+  background:#fbfbf6;color:#111;border:2px solid #111;border-radius:7px;padding-right:8px;
+  font:700 12px/1 var(--plate-font);letter-spacing:.08em;white-space:nowrap;box-shadow:0 4px 10px rgba(0,0,0,.35)}
+.pin::before{content:"E";align-self:stretch;display:flex;align-items:flex-end;background:#1b3fb3;color:#fff;font-size:8px;letter-spacing:0;
+  padding:7px 4px 4px;margin-right:7px;border-radius:4px 0 0 4px}
+.pin::after{content:"";position:absolute;left:50%;bottom:-7px;width:10px;height:10px;background:#fbfbf6;border:solid #111;border-width:0 2px 2px 0;
+  transform:translateX(-50%) rotate(45deg)}
 .pop{min-width:150px;text-align:center}
 .pop img{width:100%;border-radius:8px;margin-bottom:6px}
 .pop button{margin-top:6px;border:0;background:var(--blue);color:#fff;border-radius:8px;padding:6px 12px}
